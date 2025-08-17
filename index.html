@@ -1,52 +1,67 @@
-<!DOCTYPE html>
-<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moja Strona</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Nagłówek */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
       color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
     }
-    .container {
-      text-align: center;
+
+    /* Efekt pojawiania sekcji */
+    section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      padding: 100px 20px;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 1rem;
-      color: #764ba2;
-      background: white;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #ddd;
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Witaj na mojej stronie! 🚀</h1>
-    <p>To moja pierwsza strona na GitHub Pages 🎉</p>
-    <a href="#" class="btn">Kliknij mnie</a>
-  </div>
+  <header>
+    <h1>Moja strona</h1>
+    <nav>
+      <a href="#sekcja1">Sekcja 1</a>
+      <a href="#sekcja2">Sekcja 2</a>
+      <a href="#sekcja3">Sekcja 3</a>
+    </nav>
+  </header>
+
+  <section id="sekcja1">Pierwsza sekcja</section>
+  <section id="sekcja2">Druga sekcja</section>
+  <section id="sekcja3">Trzecia sekcja</section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
-</html>
