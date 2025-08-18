@@ -12,20 +12,22 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #1a2a6c, #2a5298, #1e3c72);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* granatowe tło */
       font-family: Arial, sans-serif;
       color: white;
+      text-align: center;
       overflow: hidden;
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 50px;
       margin: 0;
+      font-weight: bold;
     }
 
     h2 {
       font-size: 28px;
-      margin: 5px 0 40px 0;
+      margin: 10px 0 50px 0;
       font-weight: normal;
       opacity: 0.9;
     }
@@ -53,7 +55,7 @@
     .explosion {
       position: absolute;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.6);
       width: 20px;
       height: 20px;
       animation: explode 0.6s ease-out forwards;
@@ -97,7 +99,7 @@
       // Usuń efekt po animacji
       setTimeout(() => explosion.remove(), 600);
 
-      // Przekierowanie na Discord po krótkiej chwili
+      // Przekierowanie na Discord po chwili
       setTimeout(() => {
         window.open(btn.href, "_blank");
       }, 300);
