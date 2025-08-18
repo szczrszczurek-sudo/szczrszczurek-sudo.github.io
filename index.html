@@ -14,5 +14,53 @@
       align-items: center;
       font-family: Arial, sans-serif;
     }
-    .contai
-    
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .character {
+      width: 200px;
+      animation: press 2s infinite;
+    }
+    @keyframes press {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 20px;
+      background: #5865f2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      background: #4752c4;
+    }
+    h1, p {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Witaj na mojej stronie!</h1>
+    <p>To jest sekcja startowa 🚀</p>
+    <div class="container">
+      <!-- Skin Minecraft z Crafatar -->
+      <img src="https://crafatar.com/renders/body/_Zap0mniany_?overlay" 
+           alt="Minecraft Skin" 
+           class="character">
+      <!-- Przycisk Discord -->
+      <a href="https://discord.gg/q7ueSjc6" class="btn" target="_blank">Dołącz na serwer</a>
+    </div>
+  </div>
+</body>
+</html>
