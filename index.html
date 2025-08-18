@@ -6,76 +6,78 @@
   <title>Moja Strona</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f9;
-      color: #333;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
     header {
-      background: #6200ea;
+      background: #333;
       color: white;
-      padding: 15px 20px;
-      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav {
-      background: #3700b3;
       display: flex;
       justify-content: center;
-      padding: 10px;
+      gap: 20px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
-      transition: color 0.3s;
     }
     nav a:hover {
-      color: #ffcc00;
+      text-decoration: underline;
     }
     section {
-      padding: 40px;
-      text-align: center;
+      padding: 50px;
+      min-height: 100vh;
     }
     footer {
-      background: #eee;
-      padding: 15px;
+      background: #333;
+      color: white;
       text-align: center;
-      font-size: 14px;
-      margin-top: 40px;
+      padding: 15px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>🌐 Moja Strona</h1>
-    <p>Witaj na mojej stronie internetowej!</p>
+    <nav>
+      <a href="#start">Start</a>
+      <a href="#o-mnie">O mnie</a>
+      <a href="#projekty">Projekty</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#start">Start</a>
-    <a href="#o-mnie">O mnie</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-
   <section id="start">
-    <h2>Start</h2>
-    <p>To jest strona startowa. 🚀</p>
+    <h1>Witaj na mojej stronie!</h1>
+    <p>To jest sekcja startowa.</p>
   </section>
 
   <section id="o-mnie">
     <h2>O mnie</h2>
-    <p>Tu możesz napisać coś o sobie – kim jesteś, czym się zajmujesz, jakie masz hobby.</p>
+    <p>Tu możesz napisać coś o sobie.</p>
+  </section>
+
+  <section id="projekty">
+    <h2>Projekty</h2>
+    <p>Lista Twoich projektów.</p>
   </section>
 
   <section id="kontakt">
     <h2>Kontakt</h2>
-    <p>Możesz dodać tutaj e-mail, link do Discorda albo formularz kontaktowy.</p>
+    <p>Możesz tu dodać e-mail, linki do social media itp.</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Moja Strona</p>
   </footer>
+
 </body>
-    </html>
-    
+</html>
