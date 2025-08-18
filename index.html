@@ -3,94 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moja strona</title>
+  <title>Moja Strona</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      color: white;
-      background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-      background-attachment: fixed;
-      background-size: cover;
-      scroll-behavior: smooth;
+      background: #f4f4f9;
+      color: #333;
     }
-
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-size: 20px;
-    }
-
-    nav a {
+      background: #6200ea;
       color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      transition: 0.3s;
+      padding: 15px 20px;
+      text-align: center;
     }
-
-    nav a:hover {
-      color: #fdbb2d;
-    }
-
-    section {
-      min-height: 100vh;
+    nav {
+      background: #3700b3;
       display: flex;
       justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 1s ease;
+      padding: 10px;
     }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    footer {
+      background: #eee;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Moja strona</h1>
-    <nav>
-      <a href="#sekcja1">Sekcja 1</a>
-      <a href="#sekcja2">Sekcja 2</a>
-      <a href="#sekcja3">Sekcja 3</a>
-    </nav>
+    <h1>🌐 Moja Strona</h1>
+    <p>Witaj na mojej stronie internetowej!</p>
   </header>
 
-  <section id="sekcja1">Pierwsza sekcja 🌌</section>
-  <section id="sekcja2">Druga sekcja 🚀</section>
-  <section id="sekcja3">Trzecia sekcja 🌍</section>
+  <nav>
+    <a href="#start">Start</a>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
 
-  <script>
-    const sections = document.querySelectorAll("section");
+  <section id="start">
+    <h2>Start</h2>
+    <p>To jest strona startowa. 🚀</p>
+  </section>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.3 });
+  <section id="o-mnie">
+    <h2>O mnie</h2>
+    <p>Tu możesz napisać coś o sobie – kim jesteś, czym się zajmujesz, jakie masz hobby.</p>
+  </section>
 
-    sections.forEach(sec => observer.observe(sec));
-  </script>
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Możesz dodać tutaj e-mail, link do Discorda albo formularz kontaktowy.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Moja Strona</p>
+  </footer>
 </body>
-</html>
+    </html>
+    
