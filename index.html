@@ -3,82 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moja Strona</title>
+  <title>Zap0mniany | Discord</title>
   <style>
     body {
       margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4e54c8, #8f94fb);
-      color: white;
+    }
+    .container {
       text-align: center;
     }
-
-    nav {
-      background: #111;
-      padding: 15px;
+    .character {
+      width: 200px;
+      animation: press 2s infinite;
     }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    @keyframes press {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
     }
-
-    .hero {
-      padding: 80px 20px;
-    }
-
-    .btn-discord {
-      background: #5865F2;
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 20px;
+      background: #5865f2;
       color: white;
       border: none;
-      padding: 15px 30px;
       border-radius: 10px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
+      text-decoration: none;
+      transition: transform 0.2s;
     }
-
-    .btn-discord:hover {
+    .btn:hover {
+      transform: scale(1.1);
       background: #4752c4;
-    }
-
-    .character {
-      width: 150px;
-      margin-top: 20px;
-      animation: moveHand 2s infinite;
-    }
-
-    /* Animacja żeby wyglądało jak klikanie */
-    @keyframes moveHand {
-      0% { transform: translateY(0px) rotate(0deg); }
-      25% { transform: translateY(10px) rotate(-10deg); }
-      50% { transform: translateY(0px) rotate(0deg); }
-      75% { transform: translateY(10px) rotate(10deg); }
-      100% { transform: translateY(0px) rotate(0deg); }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#start">Start</a>
-    <a href="#projekty">Projekty</a>
-  </nav>
-
-  <section id="start" class="hero">
-    <h1>Witaj na mojej stronie!</h1>
-    <p>To jest sekcja startowa 🚀</p>
-
-    <!-- Przycisk Discord -->
-    <a href="https://discord.gg/q7ueSjc6" target="_blank">
-      <button class="btn-discord">Dołącz na Discorda</button>
-    </a>
-
-    <!-- Steve Minecraft klika -->
-    <img src="https://media.tenor.com/eT3IT4oW3bIAAAAi/minecraft-steve.gif" 
-         alt="Steve Minecraft" 
+  <div class="container">
+    <img src="https://starlightskins.lunareclipse.studio/render/body/_Zap0mniany_" 
+         alt="Minecraft Skin" 
          class="character">
-  </section>
+    <br>
+    <a href="https://discord.gg/q7ueSjc6" class="btn" target="_blank">Dołącz na serwer</a>
+  </div>
 </body>
 </html>
