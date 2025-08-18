@@ -10,9 +10,11 @@
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
+      background: #f5f5f5;
+      color: #333;
     }
     header {
-      background: #333;
+      background: #6200ea;
       color: white;
       padding: 15px;
       position: sticky;
@@ -22,22 +24,61 @@
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      position: relative;
+      padding: 5px 10px;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      background: yellow;
+      transition: width 0.3s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: yellow;
+    }
+    nav a:hover::after {
+      width: 100%;
     }
     section {
-      padding: 50px;
+      padding: 60px 20px;
       min-height: 100vh;
+      text-align: center;
+    }
+    section:nth-child(even) {
+      background: #e8e8e8;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: #5865F2; /* kolor Discorda */
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #404EED;
     }
     footer {
-      background: #333;
+      background: #6200ea;
       color: white;
       text-align: center;
       padding: 15px;
@@ -56,23 +97,24 @@
   </header>
 
   <section id="start">
-    <h1>Witaj na mojej stronie!</h1>
-    <p>To jest sekcja startowa.</p>
+    <h1>Start</h1>
+    <p>To jest strona startowa 🚀</p>
+    <a href="https://discord.gg/q7ueSjc6" target="_blank" class="btn">Dołącz na Discorda</a>
   </section>
 
   <section id="o-mnie">
     <h2>O mnie</h2>
-    <p>Tu możesz napisać coś o sobie.</p>
+    <p>Tu możesz napisać coś o sobie – kim jesteś, czym się zajmujesz, jakie masz hobby.</p>
   </section>
 
   <section id="projekty">
     <h2>Projekty</h2>
-    <p>Lista Twoich projektów.</p>
+    <p>Tu możesz dodać listę swoich projektów, portfolio albo galerię zdjęć.</p>
   </section>
 
   <section id="kontakt">
     <h2>Kontakt</h2>
-    <p>Możesz tu dodać e-mail, linki do social media itp.</p>
+    <p>Możesz dodać tutaj e-mail, link do Discorda albo formularz kontaktowy.</p>
   </section>
 
   <footer>
